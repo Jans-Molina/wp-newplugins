@@ -101,3 +101,26 @@ del plugins ejecute un script de instalación cuando instale su plugins). <-- no
 		3.- Cree una función de actualización, si una nueva versión de su plugins necesite tener una
 		estructura de tabla diferente.
 
+"WP Plugins Boilerplate"
+
+* Es una base predefinida que sirve como punto de partida para desarrollar plugins de WP. Proporciona una base solida
+y organizada, con las mejores practicas recomendadas para WP.
+
+* Divide el codigo en modulos:
+	- /include : Contiene la logica principal del plugins.
+	- /admin : Archivos relacionados con la administracion (pantalla, opciones, etc..).
+	- /public : Archivos relacionados con la parte frintal del sitio (JavaScript, Css).
+	- /languaje : Archivo de traduccion para soporte multilingue.
+
+* La mayoria de los boilerplates modenos utilizan la estructura POO para un codigo mas escalable y reutilizable.
+
+* Incluye los archivos necesarios y funciones para facilitar la traduccion del plugins.
+
+* Ventajas:
+	- Ahorra tiempo. 
+	- Mejores practicas.
+	- Facil de escalar.
+	- Mantenimiento.
+
+* Existen varios wp plugins boilerplates para seguir de forma estructurada, limpia y segura el codigo pero el que
+mejor recomendado es el "WP Plugins Boilerplate by Tom McFarlin". 
