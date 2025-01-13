@@ -88,13 +88,13 @@
   - Datos: Información que se agrega a medida que el usuario continúe usando el plugins. Los datos se pueden almacenar en una tabla MySQL/MariaDB separado, que deberá crearse.
 
 - Este mismo artículo explica como crear automáticamente una tabla MySQL/MariaDB para almacenar sus datos (el usuario
-  del plugins ejecute un script de instalación cuando instale su plugins). <-- no recomendada.
+  del plugins ejecute un script de instalación cuando instale su plugins). <-- **no recomendada.**
 
-      Recomendado -->
+- **Recomendado** -->
 
-      	1. Escribe una función PHP que se cree la tabla.
-      	2. Asegúrate de que WordPress llame a la función cuando se active el plugins.
-      	3. Cree una función de actualización, si una nueva versión de su plugins necesite tener una estructura de tabla diferente.
+  - Escribe una función PHP que se cree la tabla.
+  - Asegúrate de que WordPress llame a la función cuando se active el plugins.
+  - Cree una función de actualización, si una nueva versión de su plugins necesite tener una estructura de tabla diferente.
 
 # WP Plugins Boilerplate
 
