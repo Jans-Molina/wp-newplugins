@@ -1,1 +1,125 @@
-Jans, pon el contenido de apuntesDP.txt aquí en formato Markdown
+# Plugin de WordPress
+
+- Los plugins de WP son una buena practica ya que WP sobrescribe archivos con cada actualización y esto hace
+  se borre lo implementado desde el núcleo. Al implementar un plugins este permanecerá a toda costa.
+
+- Los plugins están compuestos de PHP, IMG, CSS Y JS.
+
+- Los plugins se componen de muchos archivos, pero en realidad solo necesita un archivo principal con un DocBlock
+  con formato especifico en el encabezado.
+
+# Buenas Practicas
+
+    - Todos los códigos accesibles debe tener como prefijo un identificador único para evitar sobreescribir y
+    anular los de otros plugins.
+
+    - Bases para empezar un Plugin (Guías);
+
+    	* WordPress Plugin Boilerplate.
+    	* Plugin Bootstrap de WordPress.
+    	* Plugin WP Skeleton.
+    	* WP CLI Scaffold.
+
+    - Destinar de forma correcta un plugins.
+
+    - Las capacidades del usuario, como el rol que tiene.
+
+# Hooks
+
+- Existen 2 tipos de hooks;
+
+  1.  Actions (Acciones): Te permite agregar datos o cambios al funcionamiento de WP.
+  2.  Filters (Filtros): Te dan la posibilidad de cambiar datos durante la ejecución de wp, plugins y temas.
+
+- Las reglas de privacidad se basan en la ISO29100/Privacy Framework.
+
+- La documentación trae preguntas para ayudar a saber si tu plugins esta listo. (Privacidad/En este Ambito).
+
+- Metaboxes mediante POO.
+
+- API HTTP;
+
+  1.  GET.
+  2.  POST.
+  3.  HEAD.
+
+- Ver sobre wp_remote_request()
+
+- API REST;
+
+  1.  GET: Debe usarse para recuperar datos de la API.
+  2.  POST: Debe usarse para crear nuevos recursos (users, public, taxon)
+  3.  PUT: Debe utilizarse para actualizar recursos.
+  4.  DELETE: Debe usarse para eliminar recursos.
+  5.  OPTIONS: Debe utilizarse para proporcionar contexto sobre nuestros recursos.
+
+- Schema, estructura de datos. (Rest-api/Schema).
+
+# Preguntas
+
+- Para crear un plugins para WP es requerido utilizar la herramienta API de Wordpress como un pilar obligatorio?
+
+- Porque en el desarrollo de plugins se puede implementar un comando para desactivar clases o funciones
+  (etc..), después de crearlas y haciendo su llamada correspondiente?
+
+- Php tiene que estar presente presente en el desarrollo de mi plugins si aunque decida utilizar otras herramientas
+  y lenguajes?
+
+- Existen herramientas para comprar si mi plugins cumple los requisitos de desarrollo para poder enviarlo a producción?
+
+- Wp Cron se de utilizar si o si en en el desarrollo de mi plugins para ejecutar las tareas que ofrece?
+
+> **Nota: para producción verificar siempre y no saltarse los puntos de limpieza, seguridad, el manejo de errores y l internacionalización.**
+
+# CRON
+
+- Se debe aplicar un gancho cron si o si para que se ejecuten mis tareas del plugins?
+
+"Internacionalización"
+
+- Ayuda a poder traducir en el proceso de desarrollo del plugins para que se pueda traducir fácilmente a otros idiomas.
+
+# Creación de tablas del plugins
+
+- WP almacena su información en la base de datos misma por lo cual existen 2 tipos de información que pueda almacenar;
+
+  1.  Información de configuración: La configuración predeterminada que se introducen cuando el usuario configure
+      primera vez el plugins.
+
+  2.  Datos: Información que se agrega a medida que el usuario continúe usando el plugins. Los datos se pueden
+      almacenar en una tabla MySQL/MariaDB separado, que deberá crearse.
+
+- Este mismo artículo explica como crear automáticamente una tabla MySQL/MariaDB para almacenar sus datos (el usuario
+  del plugins ejecute un script de instalación cuando instale su plugins). <-- no recomendada.
+
+      Recomendado -->
+
+      	1. Escribe una función PHP que se cree la tabla.
+      	2. Asegúrate de que WordPress llame a la función cuando se active el plugins.
+      	3. Cree una función de actualización, si una nueva versión de su plugins necesite tener una estructura de tabla diferente.
+
+# WP Plugins Boilerplate
+
+- Es una base predefinida que sirve como punto de partida para desarrollar plugins de WP. Proporciona una base solida
+  y organizada, con las mejores practicas recomendadas para WP.
+
+- Divide el codigo en modulos:
+
+  1.  /include : Contiene la logica principal del plugins.
+  2.  /admin : Archivos relacionados con la administracion (pantalla, opciones, etc..).
+  3.  /public : Archivos relacionados con la parte frintal del sitio (JavaScript, Css).
+  4.  /languaje : Archivo de traduccion para soporte multilingue.
+
+- La mayoria de los boilerplates modenos utilizan la estructura POO para un codigo mas escalable y reutilizable.
+
+- Incluye los archivos necesarios y funciones para facilitar la traduccion del plugins.
+
+- Ventajas:
+
+  1.  Ahorra tiempo.
+  2.  Mejores practicas.
+  3.  Facil de escalar.
+  4.  Mantenimiento.
+
+- Existen varios wp plugins boilerplates para seguir de forma estructurada, limpia y segura el codigo pero el que
+  mejor recomendado es el "WP Plugins Boilerplate by Tom McFarlin".
