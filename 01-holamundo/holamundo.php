@@ -6,4 +6,9 @@ Version: 1.0
 Author: Jans Molina
 */
 
-// Tu código PHP aquí
+// Hook que agrega contenido al pie de cada entrada.
+add_action('wp_footer', 'funcion_personalizada');
+
+function funcion_personalizada() {
+    echo "<p> Este es el plugins creado! </p>"
+}
