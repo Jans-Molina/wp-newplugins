@@ -10,26 +10,26 @@
 
 # Buenas Practicas
 
-    - Todos los códigos accesibles debe tener como prefijo un identificador único para evitar sobreescribir y
-    anular los de otros plugins.
+- Todos los códigos accesibles debe tener como prefijo un identificador único para evitar sobreescribir y
+  anular los de otros plugins.
 
-    - Bases para empezar un Plugin (Guías);
+- Bases para empezar un Plugin (Guías);
 
-    	* WordPress Plugin Boilerplate.
-    	* Plugin Bootstrap de WordPress.
-    	* Plugin WP Skeleton.
-    	* WP CLI Scaffold.
+  - WordPress Plugin Boilerplate.
+  - Plugin Bootstrap de WordPress.
+  - Plugin WP Skeleton.
+  - WP CLI Scaffold.
 
-    - Destinar de forma correcta un plugins.
+- Destinar de forma correcta un plugins.
 
-    - Las capacidades del usuario, como el rol que tiene.
+- Las capacidades del usuario, como el rol que tiene.
 
 # Hooks
 
 - Existen 2 tipos de hooks;
 
-  1.  Actions (Acciones): Te permite agregar datos o cambios al funcionamiento de WP.
-  2.  Filters (Filtros): Te dan la posibilidad de cambiar datos durante la ejecución de wp, plugins y temas.
+  - Actions (Acciones): Te permite agregar datos o cambios al funcionamiento de WP.
+  - Filters (Filtros): Te dan la posibilidad de cambiar datos durante la ejecución de wp, plugins y temas.
 
 - Las reglas de privacidad se basan en la ISO29100/Privacy Framework.
 
@@ -39,19 +39,19 @@
 
 - API HTTP;
 
-  1.  GET.
-  2.  POST.
-  3.  HEAD.
+  - GET.
+  - POST.
+  - HEAD.
 
 - Ver sobre wp_remote_request()
 
 - API REST;
 
-  1.  GET: Debe usarse para recuperar datos de la API.
-  2.  POST: Debe usarse para crear nuevos recursos (users, public, taxon)
-  3.  PUT: Debe utilizarse para actualizar recursos.
-  4.  DELETE: Debe usarse para eliminar recursos.
-  5.  OPTIONS: Debe utilizarse para proporcionar contexto sobre nuestros recursos.
+  - GET: Debe usarse para recuperar datos de la API.
+  - POST: Debe usarse para crear nuevos recursos (users, public, taxon)
+  - PUT: Debe utilizarse para actualizar recursos.
+  - DELETE: Debe usarse para eliminar recursos.
+  - OPTIONS: Debe utilizarse para proporcionar contexto sobre nuestros recursos.
 
 - Schema, estructura de datos. (Rest-api/Schema).
 
@@ -69,7 +69,7 @@
 
 - Wp Cron se de utilizar si o si en en el desarrollo de mi plugins para ejecutar las tareas que ofrece?
 
-> **Nota: para producción verificar siempre y no saltarse los puntos de limpieza, seguridad, el manejo de errores y l internacionalización.**
+> ### _Nota: para producción verificar siempre y no saltarse los puntos de limpieza, seguridad, el manejo de errores y l internacionalización._
 
 # CRON
 
@@ -83,11 +83,9 @@
 
 - WP almacena su información en la base de datos misma por lo cual existen 2 tipos de información que pueda almacenar;
 
-  1.  Información de configuración: La configuración predeterminada que se introducen cuando el usuario configure
-      primera vez el plugins.
+  - Información de configuración: La configuración predeterminada que se introducen cuando el usuario configure primera vez el plugins.
 
-  2.  Datos: Información que se agrega a medida que el usuario continúe usando el plugins. Los datos se pueden
-      almacenar en una tabla MySQL/MariaDB separado, que deberá crearse.
+  - Datos: Información que se agrega a medida que el usuario continúe usando el plugins. Los datos se pueden almacenar en una tabla MySQL/MariaDB separado, que deberá crearse.
 
 - Este mismo artículo explica como crear automáticamente una tabla MySQL/MariaDB para almacenar sus datos (el usuario
   del plugins ejecute un script de instalación cuando instale su plugins). <-- no recomendada.
@@ -105,10 +103,10 @@
 
 - Divide el codigo en modulos:
 
-  1.  /include : Contiene la logica principal del plugins.
-  2.  /admin : Archivos relacionados con la administracion (pantalla, opciones, etc..).
-  3.  /public : Archivos relacionados con la parte frintal del sitio (JavaScript, Css).
-  4.  /languaje : Archivo de traduccion para soporte multilingue.
+  - _/include_ : Contiene la logica principal del plugins.
+  - _/admin_ : Archivos relacionados con la administracion (pantalla, opciones, etc..).
+  - _/public_ : Archivos relacionados con la parte frintal del sitio (JavaScript, Css).
+  - _/languaje_ : Archivo de traduccion para soporte multilingue.
 
 - La mayoria de los boilerplates modenos utilizan la estructura POO para un codigo mas escalable y reutilizable.
 
@@ -116,10 +114,10 @@
 
 - Ventajas:
 
-  1.  Ahorra tiempo.
-  2.  Mejores practicas.
-  3.  Facil de escalar.
-  4.  Mantenimiento.
+  - Ahorra tiempo.
+  - Mejores practicas.
+  - Facil de escalar.
+  - Mantenimiento.
 
 - Existen varios wp plugins boilerplates para seguir de forma estructurada, limpia y segura el codigo pero el que
   mejor recomendado es el "WP Plugins Boilerplate by Tom McFarlin".
